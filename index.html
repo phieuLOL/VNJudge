@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="./css/style.css">
+          <title>Document</title>
+     </head>
+     <body>
+          <div class="taskbar-menu">
+               <ul class="list-element-taskbar-menu">
+                    <li class="element-taskbar-menu home" id="home" onclick="redraw('home')">TRANG CHỦ</li>
+                    <li class="element-taskbar-menu thematic" id="thematic" onclick="redraw('thematic')">CHUYÊN ĐỀ</li>
+                    <li class="element-taskbar-menu exercises" id="exercises" onclick="redraw('exercises')">BÀI TẬP</li>
+                    <li class="element-taskbar-menu algorithm" id="algorithm" onclick="redraw('algorithm')">THUẬT TOÁN</li>
+                    <li class="element-taskbar-menu event" id="event" onclick="redraw('event')">SỰ KIỆN</li>
+                    <li class="element-taskbar-menu information" id="information" onclick="redraw('information')">THÔNG TIN</li>
+                    <li class="element-taskbar-menu help" id="help" onclick="redraw('help')">TRỢ GIÚP</li>
+               </ul>
+          </div>
+
+          <!-- <div class="table-content">
+               <div class="news">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="notifications"></ion-icon>
+                         </div>
+                         <div class="name-content">Thông báo mới</div>
+                    </div>
+
+                    <div class="body-content">
+                         <ul class="list-news">
+                              <li class="new-of-list">
+                                   <a href="" class="name-new">Lộ trình học cho người mới</a>
+                                   <div class="news-by">admin</div>
+                                   <div class="date-post">09 / 03 / 2022</div>
+                              </li>
+                              <li class="new-of-list">
+                                   <a href="" class="name-new">Hướng Dẫn Sử Dụng</a>
+                                   <div class="news-by">admin</div>
+                                   <div class="date-post">09 / 03 / 2022</div>
+                              </li>
+                              <li class="new-of-list">
+                                   <a href="" class="name-new">Ra mắt hệ thống</a>
+                                   <div class="news-by">admin</div>
+                                   <div class="date-post">09 / 03 / 2022</div>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+
+               <div class="advice">
+                    <div class="title-content title-advice">Try hard, you will become a legend !!</div>
+
+                    <div class="body-content">
+                         <div id="day-of-week"></div>
+                         <div id="current-time"></div>
+                         <div class="text-advice">Người hạnh phúc không phải người có những thứ tốt đẹp nhất, mà là người biến mọi thứ họ có trở nên tốt đẹp</div>
+                    </div>
+               </div>
+
+               <div class="hot-exercises">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="bookmark"></ion-icon>
+                         </div>
+                         <div class="name-content">Bài tập mới</div>
+                    </div>
+
+                    <div class="body-content">
+                         <ul class="list-link">
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">hieu dz hoc gioi</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">hieu dz hoc gioi</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">hieu dz hoc gioi</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">hieu dz hoc gioi</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">hieu dz hoc gioi</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+
+               <div class="hot-algorithm">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="bulb"></ion-icon>
+                         </div>
+                         <div class="name-content">Thuật toán nên biết</div>
+                    </div>
+
+                    <div class="body-content">
+                         <div class="list-algorithm">
+                              <a href="" class="element-of-list-al">quy hoạch động</a>
+                              <a href="" class="element-of-list-al">đệ quy - quay lui</a>
+                              <a href="" class="element-of-list-al">kiểm tra số nguyên tố</a>
+                              <a href="" class="element-of-list-al">chặt nhị phân</a>
+                              <a href="" class="element-of-list-al">tính toán số lớn</a>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="useful-link">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="link"></ion-icon>
+                         </div>
+                         <div class="name-content">Liên kết hữu ích</div>
+                    </div>
+
+                    <div class="body-content">
+                         <ul class="list-link" style="width: 70%; margin: 0 15% 18px 15%;">
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">web a</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">web 1</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">web 2</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">web 5</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">web 6</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div> -->
+
+          <div class="table-content">
+               <div class="pascal-thematic">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="pricetags"></ion-icon>
+                         </div>
+                         <div class="name-content">pascal cơ bản</div>
+                    </div>
+
+                    <div class="body-content">
+                         <ul class="list-link">
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Giới thiệu về Pascal</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Các lệnh cơ bản trong Pascal</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Khung code chung trong Pascal</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+               <div class="cpp-thematic">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="pricetags"></ion-icon>
+                         </div>
+                         <div class="name-content">C++ cơ bản</div>
+                    </div>
+
+                    <div class="body-content">
+                         <ul class="list-link">
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Giới thiệu về Cpp</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Các lệnh cơ bản trong Cpp</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Khung code chung trong Cpp</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+
+               <div class="all-of-thematic">
+                    <div class="title-content">
+                         <div class="item-title-content">
+                              <ion-icon name="layers"></ion-icon>
+                         </div>
+                         <div class="name-content">Các chuyên đề bài học</div>
+                    </div>
+                    
+                    <div class="body-content">
+                         <ul class="list-link">
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Sắp xếp ? Những kĩ thuật sắp xếp provip</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Số đặc biệt - những con số làm bạn lú não !! và Những cách xử lý nó</a>
+                              </li>
+                              <li class="e-link">
+                                   <a href="" class="item-e-link">Quy hoạch động - 1 thuật toán thần thánh !!</a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </div>
+          <script src="./js/main.js"></script>
+          <script src="./js/data.js"></script>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     </body>
+</html>
